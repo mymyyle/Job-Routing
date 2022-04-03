@@ -23,9 +23,8 @@ const style = {
 export default function JobDetailModal() {
   const { jobId } = useParams();
   const job = jobs.find((job) => job.id === jobId);
-  console.log(job);
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   const handleClose = () => {
     navigate("/");
   };

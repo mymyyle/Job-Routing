@@ -22,7 +22,7 @@ function App() {
       <CssBaseline />
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="login" element={<HomePage />} />
             <Route path="jobs/:jobId" element={<HomePage />} />

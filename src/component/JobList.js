@@ -11,7 +11,6 @@ function JobList({ jobs: allJobs }) {
   const [searchParams] = useSearchParams();
 
   const query = searchParams.get("query") || "";
-  console.log(query);
 
   const handleChange = (event, value) => {
     setPage(value);
@@ -20,7 +19,7 @@ function JobList({ jobs: allJobs }) {
   const jobs = allJobs.filter(({ title }) =>
     title.toLowerCase().includes(query.toLowerCase())
   );
-  console.log(jobs);
+
   const totalPage = Math.ceil(jobs.length / LIMIT);
 
   if (jobs.length === 0) {
